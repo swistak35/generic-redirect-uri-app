@@ -1,1 +1,10 @@
 No siema
+
+<table>
+  <% ParamsInfo.order("created_at DESC").limit(100).each do |pi| %>
+    <tr>
+      <td><%= pi.created_at %></td>
+      <td><%= pi.info %></td>
+    </tr>
+  <% end %>
+</table>
